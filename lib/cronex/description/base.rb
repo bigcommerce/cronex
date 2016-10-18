@@ -50,7 +50,7 @@ module Cronex
     end
 
     def plural(expression, singular, plural)
-      number = Cronex::Utils.number?(expression)
+      number = Cronex::Utils.number(expression)
       return plural if number && number > 1
       return plural if expression.include?(',')
       singular
